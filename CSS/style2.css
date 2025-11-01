@@ -7,13 +7,27 @@ body {
     height: auto;
     font-family: 'Nunito', sans-serif;
 }
-ul{
+.hov{
+    box-shadow:  1px 1px 10px 1px rgba(217, 166, 12, 0);
+    transition: 0.5s ease;
+}
+.hov:hover{
+    box-shadow:  1px 1px 10px 1px rgba(217, 166, 12, 1);
+    cursor: pointer;
+}
+button:hover{
+    cursor: pointer;
+}
+
+ul {
     display: none;
 }
-nav{
+
+nav {
     display: none;
 }
-nav img{
+
+nav img {
     width: 50px;
     height: 50px;
 }
@@ -27,7 +41,7 @@ header {
 }
 
 .titre {
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
@@ -63,7 +77,7 @@ main {
     align-items: center;
     width: 1000px;
     height: 700px;
-    animation: floatImage 4s ease-in-out infinite;
+    animation: floatImage 4s ease-in-out alternate infinite;
 }
 
 @keyframes floatImage {
@@ -71,12 +85,9 @@ main {
         transform: translateX(0) translateY(0);
     }
 
-    50% {
-        transform: translateX(0) translateY(-80px);
-    }
 
     100% {
-        transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(-50px);
     }
 
 }
@@ -120,6 +131,8 @@ main {
     height: 70px;
     border: solid 2px rgb(217, 166, 12);
     border-radius: 100%;
+    
+   
 }
 
 .social img {
@@ -134,7 +147,7 @@ button {
     height: 70px;
     color: rgba(25, 34, 63, 1);
     font-size: 25px;
-    font-weight: bold;
+    font-weight: 600;
     background-color: rgb(217, 166, 12);
     border-radius: 30px;
     box-shadow: 1px 1px 10px 1px rgba(217, 166, 12, 1);
@@ -143,12 +156,12 @@ button {
 
 .Hi,
 .And {
-    font-size: 3em;
+    font-size: 3.2em;
     font-weight: 700;
 }
 
 .Dev {
-    font-size: 5em;
+    font-size: 5.6em;
     font-weight: 700;
 }
 
@@ -218,18 +231,10 @@ p {
 }
 
 iframe {
-    width: 40vw;
-    height: 50vh;
     border-radius: 13px;
 
 }
 
-.form div,
-.formu div {
-    flex: 1;
-    width: 40vw;
-    height: 50vh;
-}
 
 input,
 textarea {
@@ -241,6 +246,9 @@ textarea {
     background-color: rgba(43, 48, 73, 1);
     font-size: 25px;
 }
+input{
+    height: 40px;
+}
 
 textarea {
     grid-row: 3/8;
@@ -248,20 +256,34 @@ textarea {
     padding-top: 20px;
 }
 
-.local {
+.local{
     width: 100%;
     height: 100%;
+}
+.local div{
+    width: 100%;
+    height: 100%;
+    
+}
+.iframe{
+   flex: 1;
+}
+footer img{
+    width: 40px;
+    height: auto;
+     transform: rotate(90deg);
 }
 
 .emo {
 
-    width: 50px;
-    height: 60px;
+    width: 60px;
+    height: 50px;
     font-size: 50px;
+    text-align: center;
     color: black;
     border-radius: 10px;
     background-color: rgb(217, 166, 12);
-    transform: rotate(-90deg);
+   
     font-family: Courier, monospace;
     font-weight: 100;
 }
@@ -316,6 +338,9 @@ textarea {
     .columns-1fr-1fr-1fr {
         grid-template-columns: 1fr 1fr;
     }
+    .columns-1fr-1fr{
+        grid-template-columns: 1fr;
+    }
 
     .pad {
         padding: 40px 0;
@@ -332,7 +357,8 @@ textarea {
         height: 800px;
         animation: none;
     }
-    body{
+
+    body {
         padding-inline: 20px;
     }
 
@@ -401,95 +427,113 @@ textarea {
         animation: none;
         padding: 40px 0;
     }
-    
+
 
 
 }
+
 @media (max-width: 1024px) {
 
-        .imgContainer,
-        .imgContainer2 {
-            width: 700px;
-            height: 600px;
-        }
-
-        .Hi,
-        .And,.titre {
-            font-size: 2em;
-            font-weight: 700;
-        }
-
-        .Dev {
-            font-size: 3em;
-            font-weight: 700;
-        }
-
-        p, input {
-            font-size: 1rem;
-        }
-        .gap40{
-            gap: 20px;
-        }
-
+    .imgContainer,
+    .imgContainer2 {
+        width: 700px;
+        height: 600px;
     }
-    @media (max-width: 725px) {
-        header{
-            height: 7vh;
-        }
-        header > :nth-child(2){
-            display: none;
-        }
-        nav{
-            display: flex;
-        }
-         .imgContainer,
-        .imgContainer2 {
-            width: 500px;
-            height: 500px;
-        }
-         .Hi,
-        .And,.titre {
-            font-size: 1.3em;
-            font-weight: 700;
-        }
 
-        .Dev {
-            font-size: 2em;
-            font-weight: 700;
-        }
-
-        p, input {
-            font-size: 0.8rem;
-        }
-        
-
-        
+    .Hi,
+    .And,
+    .titre {
+        font-size: 2em;
+        font-weight: 700;
     }
-     @media (max-width: 600px) {
-         .imgContainer,
-        .imgContainer2 {
-            width: 300px;
-            height: 300px;
-        }
-        body{
-            text-align: justify;
-        }
-        .gap20{
-            gap: 10px;
-        }
-        .padding-bottom10{
-            padding-bottom: 0;
-        }  
+
+    .Dev {
+        font-size: 3em;
+        font-weight: 700;
     }
-    @media (max-width: 425px){
-         .columns-1fr-1fr-1fr {
+
+    p,
+    input {
+        font-size: 1rem;
+    }
+
+    .gap40 {
+        gap: 20px;
+    }
+
+}
+
+@media (max-width: 725px) {
+    header {
+        height: 7vh;
+    }
+
+    header> :nth-child(2) {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    .imgContainer,
+    .imgContainer2 {
+        width: 500px;
+        height: 500px;
+    }
+
+    .Hi,
+    .And,
+    .titre {
+        font-size: 1.3em;
+        font-weight: 700;
+    }
+
+    .Dev {
+        font-size: 2em;
+        font-weight: 700;
+    }
+
+    p,
+    input {
+        font-size: 0.8rem;
+    }
+
+
+
+}
+
+@media (max-width: 600px) {
+
+    .imgContainer,
+    .imgContainer2 {
+        width: 300px;
+        height: 300px;
+    }
+
+    body {
+        text-align: justify;
+    }
+
+    .gap20 {
+        gap: 10px;
+    }
+
+    .padding-bottom10 {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .columns-1fr-1fr-1fr {
         grid-template-columns: 1fr;
     }
+
     .anim-parent {
         width: 80vw;
         height: 50vw;
     }
 
-        
 
-    }
+
+}
